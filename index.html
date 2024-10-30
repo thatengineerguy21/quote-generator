@@ -20,7 +20,6 @@
     <script>
         const quote = document.getElementById("quote");
         const author = document.getElementById("author");
-        const api_url = "https://zenquotes.io/api/random";
 
         async function getQuote() {
             try {
@@ -34,7 +33,7 @@
                 author.innerHTML = "";
             }
         }
-        getQuote(api_url);
+        getQuote();
 
         function post(){
             window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML+ " --by " + author.innerHTML ,"Post Window", "width=600", "height=300");
